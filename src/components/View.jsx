@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import NavBar from './NavBar'
 
 const View = () => {
     const [news, changeData] = useState({"articles":[]})
@@ -13,6 +14,7 @@ const View = () => {
     useEffect(()=>{fetchData()},[])
     return (
         <div>
+            <NavBar/>
             <br />
             <div class="card text-center mb-3">
                 <div class="card-body">
